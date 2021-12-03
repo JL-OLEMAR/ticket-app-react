@@ -21,16 +21,16 @@ export const CrearTicket = () => {
   return (
     <>
       <Row>
-        <Col span={14} offset={6} align="center">
+        <Col span={14} offset={6} align='center'>
           <Title level={3}>
-              Presione el botón para un nuevo ticket
+            Presione el botón para un nuevo ticket
           </Title>
 
           <Button
-            type="primary"
-            shape="round"
-            icon={<DownloadOutlined /> }
-            size="large"
+            type='primary'
+            shape='round'
+            icon={<DownloadOutlined />}
+            size='large'
             onClick={nuevoTicket}
           >
             Nuevo Ticket
@@ -41,13 +41,13 @@ export const CrearTicket = () => {
       {
         ticket && (
           <Row style={{ marginTop: 100 }}>
-            <Col span={14} offset={6} align="center">
+            <Col span={14} offset={6} align='center'>
               <Text level={2}>
-              Su número
+                Su número
               </Text>
               <br />
 
-              <Text type="success" style={{ fontSize: 55 }}>
+              <Text type='success' style={{ fontSize: 55 }}>
                 {ticket.numero}
               </Text>
             </Col>

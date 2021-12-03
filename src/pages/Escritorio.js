@@ -18,7 +18,7 @@ export const Escritorio = () => {
   const history = useHistory()
 
   const salir = () => {
-    localStorage.clear()
+    window.localStorage.clear()
     history.replace('/ingresar')
   }
 
@@ -29,7 +29,7 @@ export const Escritorio = () => {
   }
 
   if (!usuario.agente || !usuario.escritorio) {
-    return <Redirect to="/ingresar" />
+    return <Redirect to='/ingresar' />
   }
 
   return (
@@ -38,13 +38,13 @@ export const Escritorio = () => {
         <Col span={20}>
           <Title level={2}>{usuario.agente}</Title>
           <Text>Usted está trabajando en el escritorio: </Text>
-          <Text type="success">{usuario.escritorio}</Text>
+          <Text type='success'>{usuario.escritorio}</Text>
         </Col>
 
-        <Col span={4} align="right">
+        <Col span={4} align='right'>
           <Button
-            shape="round"
-            type="danger"
+            shape='round'
+            type='danger'
             onClick={salir}
           >
             <CloseCircleOutlined />
@@ -62,7 +62,7 @@ export const Escritorio = () => {
               <Text>Está atendiendo el ticket número: </Text>
               <Text
                 style={{ fontSize: 30 }}
-                type="danger"
+                type='danger'
               >
                 {ticket.numero}
               </Text>
@@ -72,11 +72,11 @@ export const Escritorio = () => {
       }
 
       <Row>
-        <Col offset={18} span={6} align="right">
+        <Col offset={18} span={6} align='right'>
           <Button
             onClick={siguienteTicket}
-            shape="round"
-            type="primary"
+            shape='round'
+            type='primary'
           >
             <RightOutlined />
             Siguiente

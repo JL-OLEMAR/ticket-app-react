@@ -8,7 +8,7 @@ export const SocketProvider = ({ children }) => {
 
   return (
     <SocketContext.Provider value={{ socket, online }}>
-      { children }
+      {children}
     </SocketContext.Provider>
   )
 }

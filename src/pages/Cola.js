@@ -40,8 +40,8 @@ export const Cola = () => {
                 <Card
                   style={{ width: 300, marginTop: 16 }}
                   actions={[
-                    <Tag color="volcano">{item.agente}</Tag>,
-                    <Tag color="magenta">Escritorio: {item.escritorio}</Tag>
+                    <Tag color='volcano'>{item.agente}</Tag>,
+                    <Tag color='magenta'>Escritorio: {item.escritorio}</Tag>
                   ]}
                 >
                   <Title>No. {item.numero}</Title>
@@ -60,17 +60,15 @@ export const Cola = () => {
                 title={`Ticket No. ${item.numero}`}
                 description={
                   <>
-                    <Text type="secondary">En el escritorio: </Text>
-                    <Tag color="magenta">{item.escritorio}</Tag>
-                    <Text type="secondary">Agente: </Text>
-                    <Tag color="volcano">{item.agente}</Tag>
+                    <Text type='secondary'>En el escritorio: </Text>
+                    <Tag color='magenta'>{item.escritorio}</Tag>
+                    <Text type='secondary'>Agente: </Text>
+                    <Tag color='volcano'>{item.agente}</Tag>
                   </>
                 }
               />
             )}
-          >
-
-          </List>
+          />
         </Col>
       </Row>
     </>

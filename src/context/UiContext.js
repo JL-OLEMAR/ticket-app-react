@@ -18,7 +18,8 @@ export const UiProvider = ({ children }) => {
       ocultarMenu,
       showMenu,
       hideMenu
-    }}>
+    }}
+    >
       {children}
     </UiContext.Provider>
   )

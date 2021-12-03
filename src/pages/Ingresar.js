@@ -22,8 +22,8 @@ export const Ingresar = () => {
   useHideMenu(false)
 
   const onFinish = ({ agente, escritorio }) => {
-    localStorage.setItem('agente', agente)
-    localStorage.setItem('escritorio', escritorio)
+    window.localStorage.setItem('agente', agente)
+    window.localStorage.setItem('escritorio', escritorio)
 
     history.push('/escritorio')
   }
@@ -33,7 +33,7 @@ export const Ingresar = () => {
   }
 
   if (usuario.agente && usuario.escritorio) {
-    return <Redirect to="/escritorio" />
+    return <Redirect to='/escritorio' />
   }
 
   return (
@@ -44,22 +44,22 @@ export const Ingresar = () => {
 
       <Form
         {...layout}
-        name="basic"
+        name='basic'
         initialValues={{ remember: true }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
         <Form.Item
-          label="Nombre del agente"
-          name="agente"
+          label='Nombre del agente'
+          name='agente'
           rules={[{ required: true, message: 'Por favor ingrese su nombre' }]}
         >
           <Input />
         </Form.Item>
 
         <Form.Item
-          label="Escritorio"
-          name="escritorio"
+          label='Escritorio'
+          name='escritorio'
           rules={[{ required: true, message: 'Ingrese el número de escritorio' }]}
         >
           <InputNumber min={1} max={99} />
@@ -67,12 +67,12 @@ export const Ingresar = () => {
 
         <Form.Item {...tailLayout}>
           <Button
-            type="primary"
-            htmlType="submit"
-            shape="round"
+            type='primary'
+            htmlType='submit'
+            shape='round'
           >
             <SaveOutlined />
-          Ingresar
+            Ingresar
           </Button>
         </Form.Item>
       </Form>
